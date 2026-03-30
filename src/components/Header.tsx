@@ -4,11 +4,10 @@ import Logo from "../assets/images/logo.png";
 
 // Navigation link configuration for easier future updates
 const NAV_ITEMS = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#" },
-  { name: "Menu", href: "#" },
-  { name: "Chefs", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Beranda", href: "#home" },
+  { name: "Tentang", href: "#" },
+  { name: "Jadwal", href: "#" },
+  { name: "Hubungi Kami", href: "#" },
 ];
 
 const Header = () => {
@@ -46,7 +45,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Brand Logo */}
           <div className="flex-shrink-0">
-            <img src={Logo} width={200} height={200} className="p-2"/>
+            <img src={Logo} width={90} height={90} className="p-2"/>
           </div>
 
           {/* Desktop Navigation */}

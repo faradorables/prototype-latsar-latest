@@ -1,31 +1,31 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import Chef1 from "../assets/images/chef-1.webp";
-import Chef2 from "../assets/images/chef-2.webp";
-import Chef3 from "../assets/images/chef-3.webp";
+import Chef1 from "../assets/images/guru.png";
+import Chef2 from "../assets/images/kepsek.png";
+import Chef3 from "../assets/images/kejuruan.png";
 
 // Centralized configuration for chef data
 const CHEF_PROFILES = [
   {
-    name: "Aarav Kapoor",
-    title: "Head Chef & Owner",
+    name: "Pendidik",
+    title: "Guru",
     image: Chef1,
-    bio: "With over 15 years of culinary excellence, Aarav brings innovative techniques to traditional flavors.",
-    specialties: ["French Cuisine", "Molecular Gastronomy"],
+    bio: "Program peningkatan kompetensi dan digitalisasi pembelajaran.",
+    specialties: ["Lihat Jadwal"],
   },
   {
-    name: "Sloane Harper",
-    title: "Pastry Chef",
+    name: "Tenaga Kependidikan",
+    title: "Kepala Sekolah, Wakil Kepala Sekolah, Operator, Pustakawan, dan Laboran",
     image: Chef2,
-    bio: "Sloane creates stunning desserts that are as beautiful as they are delicious, trained in Paris.",
-    specialties: ["Patisserie", "Artisan Breads"],
+    bio: "Penguatan tata kelola dan layanan pendukung pendidikan.",
+    specialties: ["Lihat Jadwal"],
   },
   {
-    name: "Diego Montoya",
-    title: "Sous Chef",
+    name: "Kejuruan",
+    title: "Pendidik dan Peserta Didik SMK",
     image: Chef3,
-    bio: "Diego specializes in Asian fusion, bringing bold flavors and precision to every dish.",
-    specialties: ["Asian Fusion", "Seafood"],
+    bio: "Pelatihan berbasis kompetensi link and match industri.",
+    specialties: ["Lihat Jadwal"],
   },
 ];
 
@@ -36,11 +36,11 @@ const Chefs = () => {
         {/* Section Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-4">
-            Meet Our <span className="text-primary">Chefs</span>
+            Lihat Jadwal <span className="text-primary">Pelatihan</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6" />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Our talented culinary team brings passion, creativity, and years of experience to every dish they create.
+            Informasi Jadwal Pelatihan bagi Pendidik, Tenaga Kependidikan, dan Kejuruan untuk Tahun Anggaran 2026.
           </p>
         </div>
 
@@ -64,12 +64,13 @@ const Chefs = () => {
                   <div className="p-6 text-white">
                     <ul className="flex flex-wrap gap-2">
                       {chef.specialties.map((specialty, idx) => (
-                        <li
+                        <a
                           key={idx}
-                          className="bg-primary/80 px-2 py-1 rounded-full text-xs"
+                          href="www.x.com"
+                          className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/80 px-3 py-1.5 rounded-full text-xs text-white"
                         >
                           {specialty}
-                        </li>
+                        </a>
                       ))}
                     </ul>
                   </div>

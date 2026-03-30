@@ -5,21 +5,21 @@ import { Facebook, Instagram, Youtube } from 'lucide-react';
 // Configuration constants for easier future edits
 const SOCIAL_LINKS = [
   { name: 'Facebook', icon: Facebook, href: '#' },
-  { name: 'Instagram', icon: Instagram, href: '#' },
-  { name: 'YouTube', icon: Youtube, href: '#' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/p4_jakartabarat/' },
+  { name: 'YouTube', icon: Youtube, href: 'https://www.youtube.com/@P4_JAKARTA_BARAT' },
 ];
 
 const QUICK_LINKS = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#' },
-  { name: 'Menu', href: '#' },
-  { name: 'Chefs', href: '#' },
+  { name: 'Beranda', href: '#home' },
+  { name: 'Tentang', href: '#' },
+  { name: 'Jadwal', href: '#' },
+  { name: 'Hubungi Kami', href: '#' },
 ];
 
 const CONTACT_INFO = {
-  address: ['123 Culinary Avenue', 'New York, NY 10001'],
-  phone: '(555) 123-4567',
-  email: 'reservations@resto-one.com',
+  address: ['Jl. Kerajinan No.42, Krukut, Kec. Taman Sari', 'Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11140'],
+  phone: '+6282297247834',
+  email: 'p4jb.disdikdki@gmail.com',
 };
 
 const HOURS = [
@@ -49,7 +49,7 @@ const Footer = () => {
             <img src={Logo} width={200} height={200} className="p-2"/>
           </div>
             <p className="text-muted-foreground leading-relaxed">
-              Experience culinary excellence where every dish tells a story of passion, creativity, and tradition.
+              Pusat Pelatihan dan Pengembangan Pendidikan Kota Administrasi Jakarta Barat
             </p>
             <div className="flex space-x-4">
               {SOCIAL_LINKS.map(({ name, icon: Icon, href }) => (

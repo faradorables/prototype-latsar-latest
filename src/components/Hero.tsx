@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import HeroBG from "./../assets/images/hero-bg.webp";
+import HeroBG from "./../assets/images/header.jpg";
 
 // Configurable constants for background image and section targets
 const MENU_SECTION_ID = "#";
@@ -32,7 +32,7 @@ const Hero = () => {
           data-aos-delay="100"
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-white mb-6 leading-tight"
         >
-          Welcome to <span className="text-primary">RestoOne</span>
+          Selamat Datang di <span className="text-primary">P4 Jakarta Barat</span>
         </h1>
 
         <p
@@ -40,8 +40,7 @@ const Hero = () => {
           data-aos-delay="500"
           className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Where culinary artistry meets exceptional hospitality. Experience the
-          finest flavors crafted with passion and precision.
+          Pusat Pelatihan dan Pengembangan Pendidikan Kota Administrasi Jakarta Barat
         </p>
 
         {/* Call-to-action buttons */}
@@ -55,7 +54,7 @@ const Hero = () => {
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
             onClick={() => scrollToSection(MENU_SECTION_ID)}
           >
-            Explore Menu
+            Lihat Jadwal Pelatihan
           </Button>
 
           <Button
@@ -64,7 +63,7 @@ const Hero = () => {
             className="border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg font-semibold transition-all duration-300 transform hover:scale-105"
             onClick={() => scrollToSection(CONTACT_SECTION_ID)}
           >
-            Make Reservation
+            Hubungi Kami
           </Button>
         </div>
       </div>
