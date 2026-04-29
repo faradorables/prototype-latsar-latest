@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-01-19",
     "tanggalSelesai": "2026-01-23",
@@ -10,11 +10,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 2,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SMA",
     "tanggalMulai": "2026-01-19",
     "tanggalSelesai": "2026-01-23",
@@ -23,11 +25,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "2",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 3,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-01-26",
     "tanggalSelesai": "2026-01-29",
@@ -36,11 +40,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 4,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SMP",
     "tanggalMulai": "2026-01-26",
     "tanggalSelesai": "2026-01-29",
@@ -49,11 +55,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 5,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SMK",
     "tanggalMulai": "2026-01-26",
     "tanggalSelesai": "2026-01-29",
@@ -62,11 +70,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 6,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang PAUD",
     "tanggalMulai": "2026-02-09",
     "tanggalSelesai": "2026-02-13",
@@ -75,11 +85,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 7,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-02-09",
     "tanggalSelesai": "2026-02-13",
@@ -88,11 +100,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 8,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SMP",
     "tanggalMulai": "2026-02-09",
     "tanggalSelesai": "2026-02-13",
@@ -101,11 +115,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 9,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-04-06",
     "tanggalSelesai": "2026-04-10",
@@ -114,11 +130,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 10,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SMA",
     "tanggalMulai": "2026-04-06",
     "tanggalSelesai": "2026-04-10",
@@ -127,11 +145,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 11,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-04-13",
     "tanggalSelesai": "2026-04-17",
@@ -140,11 +160,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 12,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SMK",
     "tanggalMulai": "2026-04-13",
     "tanggalSelesai": "2026-04-17",
@@ -153,11 +175,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 13,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-04-20",
     "tanggalSelesai": "2026-04-24",
@@ -166,11 +190,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "2",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 14,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik", 
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang PAUD",
     "tanggalMulai": "2026-05-18",
     "tanggalSelesai": "2026-05-22",
@@ -179,11 +205,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 15,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik", 
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang SMP",
     "tanggalMulai": "2026-05-18",
     "tanggalSelesai": "2026-05-22",
@@ -192,11 +220,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 16,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Peningkatan Kompetensi Pendidikan Inklusi Bagi Kepala Satuan Pendidikan Jenjang Kesetaraan",
     "tanggalMulai": "2026-06-01",
     "tanggalSelesai": "2026-06-05",
@@ -205,11 +235,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 17,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan / Peningkatan Kompetensi Tim Pencegahan dan Penanganan Kekerasan (TPPK) Bagi Kepala/Wakil Satuan Pendidikan Jenjang SMA",
     "tanggalMulai": "2026-07-20",
     "tanggalSelesai": "2026-07-24",
@@ -218,11 +250,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 18,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Penggunaan Aplikasi Bidang Pendidikan Bagi Kepala Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-07-20",
     "tanggalSelesai": "2026-07-24",
@@ -231,11 +265,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 19,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan / Peningkatan Kompetensi Tim Pencegahan dan Penanganan Kekerasan (TPPK) Bagi Kepala/Wakil Satuan Pendidikan  Jenjang SMK",
     "tanggalMulai": "2026-08-03",
     "tanggalSelesai": "2026-08-07",
@@ -244,11 +280,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 20,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan / Peningkatan Kompetensi Manajemen Sekolah Bagi Kepala/Wakil Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-08-03",
     "tanggalSelesai": "2026-08-07",
@@ -257,11 +295,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 21,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan / Peningkatan Kompetensi Tim Pencegahan dan Penanganan Kekerasan (TPPK) Bagi Kepala/Wakil Satuan Pendidikan Jenjang SD",
     "tanggalMulai": "2026-08-10",
     "tanggalSelesai": "2026-08-14",
@@ -270,11 +310,13 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
   },
   {
     "id": 22,
-    "kategori": "tendik", // pendidik | tendik | kejuruan
+    "kategori": "tendik",
     "judul": "Pelatihan Penggunaan Aplikasi Bidang Pendidikan Bagi Tenaga Kependidikan Jenjang SMP",
     "tanggalMulai": "2026-08-10",
     "tanggalSelesai": "2026-08-14",
@@ -283,6 +325,8 @@
     "metode": "daring/online",
     "mitra": "",
     "jumlahKelas": "1",
-    "deskripsi": ""
-  },
+    "deskripsi": "",
+    "kuota": 40,
+    "status": "Dilaksanakan"
+  }
 ]

@@ -5,93 +5,86 @@ import Chef2 from "../assets/images/kepsek.png";
 import Chef3 from "../assets/images/kejuruan.png";
 
 // Centralized configuration for chef data
-const CHEF_PROFILES = [
+const months = [
   {
-    name: "Pendidik",
-    title: "Guru",
-    image: Chef1,
-    bio: "Program peningkatan kompetensi dan digitalisasi pembelajaran.",
-    specialties: ["Lihat Jadwal"],
+    name: "Januari",
+    total: 5,
+    items: ["Pelatihan A", "Pelatihan B", "Pelatihan C", "Pelatihan D"],
   },
   {
-    name: "Tenaga Kependidikan",
-    title: "Kepala Sekolah, Wakil Kepala Sekolah, Operator, Pustakawan, dan Laboran",
-    image: Chef2,
-    bio: "Penguatan tata kelola dan layanan pendukung pendidikan.",
-    specialties: ["Lihat Jadwal"],
+    name: "Februari",
+    total: 3,
+    items: ["Pelatihan A", "Pelatihan B", "Pelatihan C"],
   },
   {
-    name: "Kejuruan",
-    title: "Pendidik dan Peserta Didik SMK",
-    image: Chef3,
-    bio: "Pelatihan berbasis kompetensi link and match industri.",
-    specialties: ["Lihat Jadwal"],
+    name: "Maret",
+    total: 3,
+    items: ["Pelatihan A", "Pelatihan B", "Pelatihan C"],
+  },
+  {
+    name: "April",
+    total: 7,
+    items: ["Pelatihan A", "Pelatihan B", "Pelatihan C", "Pelatihan D"],
+  },
+  {
+    name: "Mei",
+    total: 2,
+    items: ["Pelatihan A", "Pelatihan B"],
   },
 ];
 
 const Chefs = () => {
   return (
-    <section id="chefs" className="section-padding bg-muted/30">
-      <div className="container-width">
-        {/* Section Heading */}
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-4">
-            Lihat Jadwal <span className="text-primary">Pelatihan</span>
-          </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6" />
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Informasi Jadwal Pelatihan bagi Pendidik, Tenaga Kependidikan, dan Kejuruan untuk Tahun Anggaran 2026.
-          </p>
-        </div>
+    <section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-6">
 
-        {/* Chef Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {CHEF_PROFILES.map((chef, index) => (
-            <Card
-              key={index}
-              data-aos="zoom-in-up"
-              data-aos-delay={index * 100}
-              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
-            >
-              {/* Chef Image with specialties overlay */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={chef.image}
-                  alt={`${chef.name} - ${chef.title}`}
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6 text-white">
-                    <ul className="flex flex-wrap gap-2">
-                      {chef.specialties.map((specialty, idx) => (
-                        <a
-                          key={idx}
-                          href="www.x.com"
-                          className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/80 px-3 py-1.5 rounded-full text-xs text-white"
-                        >
-                          {specialty}
-                        </a>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+    <h2 className="text-2xl font-bold text-center mb-10">
+      Jadwal Pelatihan Tahun 2026
+    </h2>
 
-              {/* Chef Details */}
-              <CardContent className="p-6">
-                <h3 className="text-xl font-playfair font-semibold text-foreground mb-1">
-                  {chef.name}
-                </h3>
-                <p className="text-primary font-medium mb-3">{chef.title}</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  {chef.bio}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+      {/* CARD BULAN */}
+      {months.map((month, index) => (
+        <div
+          key={index}
+          className="bg-white border rounded-xl p-4 shadow-sm hover:shadow-md transition"
+        >
+          <h3 className="font-semibold text-center mb-2">
+            {month.name}
+          </h3>
+
+          <div className="bg-blue-100 text-blue-700 text-xs text-center py-1 rounded-full mb-3">
+            {month.total} Pelatihan
+          </div>
+
+          <ul className="text-sm text-gray-600 space-y-1 mb-4">
+            {month.items.map((item, i) => (
+              <li key={i}>• {item}</li>
+            ))}
+            <li>• ...</li>
+          </ul>
+
+          <button className="text-blue-600 text-xs font-medium hover:underline">
+            Lihat Bulan Ini →
+          </button>
         </div>
+      ))}
+
+      {/* CARD CTA */}
+      <div className="bg-white border rounded-xl p-4 flex flex-col items-center justify-center text-center shadow-sm">
+        <div className="text-4xl mb-2">📅</div>
+        <p className="text-sm font-medium mb-2">
+          Jadwal Pelatihan Tahun 2026
+        </p>
+        <button className="text-blue-600 text-xs font-medium hover:underline">
+          Lihat Selengkapnya
+        </button>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
   );
 };
 
