@@ -1,6 +1,19 @@
 import React from "react";
 import OurStoryImg from "../assets/images/about-us.jpg";
+import data from "@/data/jadwalPelatihan.json";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
+import { Info } from "lucide-react";
 // Constants for easy future customization
 const SECTION_ID = "about";
 const STATS = [
@@ -9,88 +22,159 @@ const STATS = [
   { value: "10K+", label: "Happy Customers", delay: "1200" },
 ];
 
+const now = new Date();
+
+const upcomingTrainings = data
+  // ❌ buang yang sudah selesai
+  .filter(item => new Date(item.tanggalSelesai) >= now)
+
+  // ✅ urutkan berdasarkan tanggal mulai terdekat
+  .sort((a, b) => new Date(a.tanggalMulai).getTime() - new Date(b.tanggalMulai).getTime())
+
+  // ✅ ambil 5 teratas
+  .slice(0, 5);
+
+const formatRangeDate = (start: string, end: string) => {
+  const startDate = new Date(start);
+  const endDate = new Date(end);
+
+  const sameMonth =
+    startDate.getMonth() === endDate.getMonth() &&
+    startDate.getFullYear() === endDate.getFullYear();
+
+  if (sameMonth) {
+    return `${startDate.getDate()}–${endDate.getDate()} ${startDate.toLocaleDateString("id-ID", {
+      month: "long",
+      year: "numeric",
+    })}`;
+  }
+
+  return `${startDate.getDate()} ${startDate.toLocaleDateString("id-ID", {
+    month: "long",
+  })} - ${endDate.getDate()} ${endDate.toLocaleDateString("id-ID", {
+    month: "long",
+    year: "numeric",
+  })}`;
+};
+
+const getStatus = (start: string, end: string) => {
+  const now = new Date();
+  const startDate = new Date(start);
+  const endDate = new Date(end);
+
+  if (now < startDate) return "Dibuka";
+  if (now >= startDate && now <= endDate) return "Dilaksanakan";
+  return "Dibuka";
+};
+
 const About = () => {
   return (
-    <section id={SECTION_ID} className="section-padding bg-muted/30">
-      <div className="container-width">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left column: Story and statistics */}
-          <div className="space-y-6" data-aos="fade-right">
-            {/* Section Heading */}
-            <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-4">
-                Tentang <span className="text-primary">Kami</span>
-              </h2>
-              <div className="w-20 h-1 bg-primary mb-6" />
-            </div>
+    <section id={SECTION_ID} className="py-16 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <h2 className="text-2xl font-bold text-center mb-8">
+          Pelatihan Mendatang
+        </h2>
+        <div className="overflow-x-auto">
+          <table className="w-full border border-gray-200 rounded-lg overflow-hidden">
 
-            {/* Story Paragraphs */}
-            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
-              <p data-aos="fade-up" data-aos-delay="200">
-                P4 Jakarta Barat merupakan Unit Pelaksana Teknis (UPT) di bawah Dinas Pendidikan Provinsi DKI Jakarta 
-                yang berfokus pada pengembangan dan peningkatan kompetensi sumber daya manusia di bidang pendidikan. 
-                Kami memfasilitasi berbagai program pelatihan, pendampingan, serta penguatan kapasitas bagi pendidik, tenaga kependidikan, 
-                dan peserta didik kejuruan di wilayah Jakarta Barat.
-              </p>
-              <p data-aos="fade-up" data-aos-delay="400">
-                Melalui pelatihan yang relevan dengan kebutuhan satuan pendidikan serta perkembangan zaman, 
-                P4 Jakarta Barat berkomitmen mendukung peningkatan mutu pembelajaran, tata kelola pendidikan, dan kualitas layanan pendidikan 
-                secara berkelanjutan.
-              </p>
-              {/* <p data-aos="fade-up" data-aos-delay="600">
-                Our commitment to excellence has earned us recognition from food
-                critics and loyal patrons alike, but our greatest reward is the joy
-                we bring to every table.
-              </p> */}
-            </div>
+            {/* HEADER */}
+            <thead className="bg-blue-800 text-white text-sm">
+              <tr>
+                <th className="px-4 py-3 text-left">No</th>
+                <th className="px-4 py-3 text-left">Nama Pelatihan</th>
+                <th className="px-4 py-3 text-left">Tanggal Pelatihan</th>
+                <th className="px-4 py-3 text-left">Jenjang</th>
+                <th className="px-4 py-3 text-left">Kuota</th>
+                <th className="px-4 py-3 text-left">Status</th>
+                <th className="px-4 py-3 text-left">Info</th>
+                <th className="px-4 py-3 text-left">Aksi</th>
+              </tr>
+            </thead>
 
-            {/* Key Metrics */}
-            {/* <div className="grid grid-cols-3 gap-4 pt-8">
-              {STATS.map(({ value, label, delay }) => (
-                <div
-                  key={label}
-                  className="text-center"
-                  data-aos="zoom-in"
-                  data-aos-delay={delay}
-                >
-                  <div className="text-2xl md:text-3xl font-playfair font-bold text-primary">
-                    {value}
-                  </div>
-                  <div className="text-sm text-muted-foreground">{label}</div>
-                </div>
-              ))}
-            </div> */}
-          </div>
+            {/* BODY */}
+           <tbody className="text-sm">
+          {upcomingTrainings.map((item, index) => {
+            const status = getStatus(item.tanggalMulai, item.tanggalSelesai);
+            return (
+            <tr key={item.id} className="border-t hover:bg-gray-50">
+              <td className="px-4 py-3">{index + 1}</td>
+              <td className="px-4 py-3">{item.judul}</td>
+              <td className="px-4 py-3">{formatRangeDate(item.tanggalMulai, item.tanggalSelesai)}</td>
 
-          {/* Right column: Story image and award card */}
-          <div className="relative" data-aos="fade-left" data-aos-delay="400">
-            <div className="relative overflow-hidden rounded-lg shadow-2xl">
-              <img
-                src={OurStoryImg}
-                alt="RestoOne Restaurant Interior"
-                className="w-full h-[500px] object-cover transition-transform duration-500 hover:scale-105"
-              />
-              {/* Overlay for visual depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-            </div>
+              <td className="px-4 py-3">{item.jenjang}</td>
 
-            {/* Floating Award Card */}
-            {/* <div
-              className="absolute -bottom-6 -right-6 bg-background p-6 rounded-lg shadow-xl border max-w-xs"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div className="text-center">
-                <h3 className="font-playfair font-bold text-lg text-foreground">
-                  Award Winning
-                </h3>
-                <p className="text-muted-foreground text-sm mt-1">
-                  Best Fine Dining 2023
-                </p>
-              </div>
-            </div> */}
-          </div>
+              <td className="px-4 py-3">{item.kuota}</td>
+
+              <td className="px-4 py-3">
+                <span className={`px-3 py-1 rounded-full text-xs font-medium
+                  ${status === "Dibuka"
+                    ? "bg-blue-100 text-blue-700"
+                    : "bg-green-100 text-green-700"
+                  }`}>
+                  {status}
+                </span>
+              </td>
+              <td className="px-4 py-3">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <button>
+                      <Info
+                        size={20}
+                        className="text-blue-600 hover:text-blue-800"
+                      />
+                    </button>
+                  </PopoverTrigger>
+
+                  <PopoverContent
+                    side="left"
+                    sideOffset={10}
+                    className="w-72 bg-white border-2 border-[#0a3abb] text-[#0a3abb] rounded-xl shadow-lg"
+                  >
+                    <div className="space-y-2 text-sm">
+                      <p>
+                        <span className="font-semibold">
+                          Mitra Pelatihan:
+                        </span>{" "}
+                        {item.mitra}
+                      </p>
+
+                      <p>
+                        <span className="font-semibold">
+                          Syarat dan Ketentuan:
+                        </span>{" "}
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1">
+                      {item.tnc.map((syaratItem, index) => (
+                        <li key={index}>
+                          {syaratItem}
+                        </li>
+                      ))}
+                    </ul>
+                    </div>
+                  </PopoverContent>
+                </Popover>
+              </td>
+              <td className="px-4 py-3">
+                <button className="bg-blue-700 text-white px-4 py-1 rounded-md text-xs">
+                  Daftar
+                </button>
+              </td>
+
+            </tr>
+          )
+          })}
+        </tbody>
+
+          </table>
         </div>
+
+        {/* FOOTER BUTTON */}
+        <div className="text-center mt-6">
+          <button className="bg-blue-700 text-white px-6 py-2 rounded-md">
+            Lihat Jadwal Lengkap →
+          </button>
+        </div>
+
       </div>
     </section>
   );
