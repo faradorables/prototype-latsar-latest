@@ -8,12 +8,14 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Chefs from "@/components/Chefs";
+import TnC from "@/components/TnC";
 
 // Define the main sections of the homepage for easy customization and reordering
 const SECTIONS = [
   { id: "hero", Component: Hero },
   { id: "about", Component: About },
   { id: "chefs", Component: Chefs },
+  { id: "tnc", Component: TnC },
 ];
 
 const HomePage = () => {

@@ -1,7 +1,19 @@
 import React from "react";
 import OurStoryImg from "../assets/images/about-us.jpg";
 import data from "@/data/jadwalPelatihan.json";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
+import { Info } from "lucide-react";
 // Constants for easy future customization
 const SECTION_ID = "about";
 const STATS = [
@@ -74,6 +86,7 @@ const About = () => {
                 <th className="px-4 py-3 text-left">Jenjang</th>
                 <th className="px-4 py-3 text-left">Kuota</th>
                 <th className="px-4 py-3 text-left">Status</th>
+                <th className="px-4 py-3 text-left">Info</th>
                 <th className="px-4 py-3 text-left">Aksi</th>
               </tr>
             </thead>
@@ -101,7 +114,46 @@ const About = () => {
                   {status}
                 </span>
               </td>
+              <td className="px-4 py-3">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <button>
+                      <Info
+                        size={20}
+                        className="text-blue-600 hover:text-blue-800"
+                      />
+                    </button>
+                  </PopoverTrigger>
 
+                  <PopoverContent
+                    side="left"
+                    sideOffset={10}
+                    className="w-72 bg-white border-2 border-[#0a3abb] text-[#0a3abb] rounded-xl shadow-lg"
+                  >
+                    <div className="space-y-2 text-sm">
+                      <p>
+                        <span className="font-semibold">
+                          Mitra Pelatihan:
+                        </span>{" "}
+                        {item.mitra}
+                      </p>
+
+                      <p>
+                        <span className="font-semibold">
+                          Syarat dan Ketentuan:
+                        </span>{" "}
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1">
+                      {item.tnc.map((syaratItem, index) => (
+                        <li key={index}>
+                          {syaratItem}
+                        </li>
+                      ))}
+                    </ul>
+                    </div>
+                  </PopoverContent>
+                </Popover>
+              </td>
               <td className="px-4 py-3">
                 <button className="bg-blue-700 text-white px-4 py-1 rounded-md text-xs">
                   Daftar

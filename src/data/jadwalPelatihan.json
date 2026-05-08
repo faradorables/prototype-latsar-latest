@@ -8,11 +8,16 @@
     "bulan": "1",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+    "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 2,
@@ -23,11 +28,16 @@
     "bulan": "1",
     "jenjang": "SMA",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "2",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 3,
@@ -38,11 +48,16 @@
     "bulan": "1",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 4,
@@ -53,11 +68,16 @@
     "bulan": "1",
     "jenjang": "SMP",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 5,
@@ -68,11 +88,16 @@
     "bulan": "1",
     "jenjang": "SMK",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 6,
@@ -83,11 +108,16 @@
     "bulan": "2",
     "jenjang": "PAUD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 7,
@@ -98,11 +128,16 @@
     "bulan": "2",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 8,
@@ -113,11 +148,16 @@
     "bulan": "2",
     "jenjang": "SMP",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 9,
@@ -128,11 +168,16 @@
     "bulan": "4",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 10,
@@ -143,11 +188,16 @@
     "bulan": "4",
     "jenjang": "SMA",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 11,
@@ -158,11 +208,16 @@
     "bulan": "4",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 12,
@@ -173,11 +228,16 @@
     "bulan": "4",
     "jenjang": "SMK",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 13,
@@ -188,11 +248,16 @@
     "bulan": "4",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "2",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 14,
@@ -203,11 +268,16 @@
     "bulan": "5",
     "jenjang": "PAUD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 15,
@@ -218,11 +288,16 @@
     "bulan": "5",
     "jenjang": "SMP",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 16,
@@ -233,11 +308,16 @@
     "bulan": "6",
     "jenjang": "NFK",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 17,
@@ -248,11 +328,16 @@
     "bulan": "7",
     "jenjang": "SMA",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 18,
@@ -263,11 +348,16 @@
     "bulan": "7",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 19,
@@ -278,11 +368,16 @@
     "bulan": "8",
     "jenjang": "SMK",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 20,
@@ -293,11 +388,16 @@
     "bulan": "8",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 21,
@@ -308,11 +408,16 @@
     "bulan": "8",
     "jenjang": "SD",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   },
   {
     "id": 22,
@@ -323,10 +428,15 @@
     "bulan": "8",
     "jenjang": "SMP",
     "metode": "daring/online",
-    "mitra": "",
+    "mitra": "Creativick",
     "jumlahKelas": "1",
     "deskripsi": "",
     "kuota": 40,
-    "status": "Dilaksanakan"
+    "status": "",
+   "tnc": [
+    "Peserta merupakan tenaga kependidikan aktif",
+    "Sesuai jenjang yang dipersyaratkan",
+    "Membawa surat tugas"
+  ]
   }
 ]

@@ -5,8 +5,8 @@ import Logo from "../assets/images/logo.png";
 // Navigation link configuration for easier future updates
 const NAV_ITEMS = [
   { name: "Beranda", href: "#home" },
-  { name: "Tentang", href: "#" },
   { name: "Jadwal", href: "#" },
+  { name: "Pendaftaran", href: "#" },
   { name: "Hubungi Kami", href: "#" },
 ];
 

@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Chef1 from "../assets/images/guru.png";
 import Chef2 from "../assets/images/kepsek.png";
 import Chef3 from "../assets/images/kejuruan.png";
+import data from "@/data/jadwalPelatihan.json";
 
 // Centralized configuration for chef data
 const months = [
@@ -33,6 +34,24 @@ const months = [
   },
 ];
 
+const groupByMonth = (data: any[]) => {
+  return data.reduce((acc, item) => {
+    const date = new Date(item.tanggalMulai);
+    const month = date.toLocaleString("id-ID", { month: "long" });
+
+    if (!acc[month]) {
+      acc[month] = [];
+    }
+
+    acc[month].push(item);
+    return acc;
+  }, {} as Record<string, any[]>);
+};
+
+const groupedData = groupByMonth(data);
+
+console.log('groupedData:', groupedData);
+
 const Chefs = () => {
   return (
     <section className="py-16 bg-gray-50">
@@ -44,45 +63,35 @@ const Chefs = () => {
 
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
 
-      {/* CARD BULAN */}
-      {months.map((month, index) => (
-        <div
-          key={index}
-          className="bg-white border rounded-xl p-4 shadow-sm hover:shadow-md transition"
-        >
-          <h3 className="font-semibold text-center mb-2">
-            {month.name}
-          </h3>
+  {Object.entries(groupedData).map(([month, items], index) => (
+    <div
+      key={index}
+      className="bg-white border rounded-xl p-4 shadow-sm hover:shadow-md transition"
+    >
+      <h3 className="font-semibold text-center mb-2">
+        {month}
+      </h3>
 
-          <div className="bg-blue-100 text-blue-700 text-xs text-center py-1 rounded-full mb-3">
-            {month.total} Pelatihan
-          </div>
-
-          <ul className="text-sm text-gray-600 space-y-1 mb-4">
-            {month.items.map((item, i) => (
-              <li key={i}>• {item}</li>
-            ))}
-            <li>• ...</li>
-          </ul>
-
-          <button className="text-blue-600 text-xs font-medium hover:underline">
-            Lihat Bulan Ini →
-          </button>
-        </div>
-      ))}
-
-      {/* CARD CTA */}
-      <div className="bg-white border rounded-xl p-4 flex flex-col items-center justify-center text-center shadow-sm">
-        <div className="text-4xl mb-2">📅</div>
-        <p className="text-sm font-medium mb-2">
-          Jadwal Pelatihan Tahun 2026
-        </p>
-        <button className="text-blue-600 text-xs font-medium hover:underline">
-          Lihat Selengkapnya
-        </button>
+      <div className="bg-blue-100 text-blue-700 text-xs text-center py-1 rounded-full mb-3">
+        {items.length} Pelatihan
       </div>
 
+      <ul className="text-sm text-gray-600 space-y-2 mb-4">
+        {items.slice(0, 3).map((item, i) => (
+          <li key={i} className="line-clamp-2">
+            • {item.judul}
+          </li>
+        ))}
+        {items.length > 3 && <li>• ...</li>}
+      </ul>
+
+      <button className="text-blue-600 text-xs font-medium hover:underline">
+        Lihat Bulan Ini →
+      </button>
     </div>
+  ))}
+
+</div>
   </div>
 </section>
   );
