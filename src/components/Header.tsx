@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 // Navigation link configuration for easier future updates
 const NAV_ITEMS = [
-  { name: "Beranda", href: "#home" },
-  { name: "Jadwal", href: "#" },
-  { name: "Pendaftaran", href: "#" },
+  { name: "Beranda", href: "/" },
+  { name: "Jadwal", href: "/jadwal" },
+  { name: "Pendaftaran", href: "https://jaklat.jakarta.go.id/" },
   { name: "Hubungi Kami", href: "#" },
 ];
 
@@ -51,14 +52,14 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex ml-10 space-x-8">
             {NAV_ITEMS.map(({ name, href }) => (
-              <button
-                key={name}
-                onClick={() => handleNavigation(href)}
-                className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200 relative group"
-              >
+              <Link to={href} key={name}>
+                <button
+                  className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200 relative group"
+                >
                 {name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
+              </Link>
             ))}
           </div>
 

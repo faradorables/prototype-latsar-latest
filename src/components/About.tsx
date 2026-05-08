@@ -1,6 +1,7 @@
 import React from "react";
 import OurStoryImg from "../assets/images/about-us.jpg";
 import data from "@/data/jadwalPelatihan.json";
+import { Link } from "react-router-dom";
 import {
   Tooltip,
   TooltipContent,
@@ -155,9 +156,11 @@ const About = () => {
                 </Popover>
               </td>
               <td className="px-4 py-3">
+                <Link to="https://jaklat.jakarta.go.id/" target="_blank" rel="noopener noreferrer">
                 <button className="bg-blue-700 text-white px-4 py-1 rounded-md text-xs">
                   Daftar
                 </button>
+                </Link>
               </td>
 
             </tr>
@@ -170,9 +173,11 @@ const About = () => {
 
         {/* FOOTER BUTTON */}
         <div className="text-center mt-6">
-          <button className="bg-blue-700 text-white px-6 py-2 rounded-md">
-            Lihat Jadwal Lengkap →
-          </button>
+          <Link to="/jadwal">
+            <button className="bg-blue-700 text-white px-6 py-2 rounded-md">
+              Lihat Jadwal Lengkap →
+            </button>
+          </Link>
         </div>
 
       </div>

@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Jadwal from "./pages/Jadwal";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
+            <Route path="/jadwal" element={<Jadwal />}/>
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

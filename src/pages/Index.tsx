@@ -20,7 +20,7 @@ const SECTIONS = [
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Top navigation header */}
       <Header />
 

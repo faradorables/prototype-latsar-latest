@@ -1,5 +1,6 @@
 import HeroBG from "./../assets/images/header.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // Configurable constants for background image and section targets
 const MENU_SECTION_ID = "#";
@@ -39,11 +40,13 @@ const Hero = () => {
   console.log('tanggal:', tanggal);
 
   return (
-    <section className="relative bg-gray-50 pt-24 pb-16">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section className="relative bg-[#f5f7ff] overflow-hidden pt-24 pb-16">
+      <div className="absolute top-0 right-0 w-40 h-40 bg-blue-100 rounded-full translate-x-16 -translate-y-8 opacity-70" />
+
+      <div className="container mx-auto px-6 lg:px-12 ">
   {/* DATE */}
-        <div className="bg-gray-50 top-20 flex justify-end z-20 mb-4">
-          <div className="bg-white/80 backdrop-blur px-3 py-1 rounded-md text-sm text-gray-700 flex items-center gap-2 shadow-sm">
+        <div className="flex justify-end text-sm text-gray-500 mb-4">
+          <div className="flex items-center gap-2">
             <span>📅 {tanggal}</span>
             <span>|</span>
             <span>{jam} WIB</span>
@@ -64,13 +67,16 @@ const Hero = () => {
             </p>
 
             <div className="flex gap-4">
-              <button className="bg-[#0a3abb] text-white px-6 py-3 rounded-lg font-medium">
-                Daftar Sekarang
-              </button>
-
-              <button className="border border-[#0a3abb] text-[#0a3abb] px-6 py-3 rounded-lg font-medium">
-                Lihat Jadwal Lengkap
-              </button>
+              <Link to="https://jaklat.jakarta.go.id/" target="_blank" rel="noopener noreferrer">
+                <button className="bg-[#0a3abb] text-white px-6 py-3 rounded-lg font-medium">
+                  Daftar Sekarang
+                </button>
+              </Link>
+              <Link to="/jadwal">
+                <button className="border border-[#0a3abb] text-[#0a3abb] px-6 py-3 rounded-lg font-medium">
+                  Lihat Jadwal Lengkap
+                </button>
+              </Link>
             </div>
 
             {/* STATS */}
