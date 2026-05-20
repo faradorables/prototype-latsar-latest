@@ -13,6 +13,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { Link } from "react-router-dom";
 
 const AllJadwal = () => {
     const [search, setSearch] = useState("");
@@ -41,6 +42,7 @@ const AllJadwal = () => {
     const endDate = new Date(end);
 
     if (now < startDate) return "Dibuka";
+    if (now > startDate && now >= endDate) return "Ditutup";
     if (now >= startDate && now <= endDate) return "Dilaksanakan";
     return "Dibuka";
     };
@@ -258,7 +260,9 @@ const AllJadwal = () => {
               <td className="px-4 py-3">
                 <span className={`px-3 py-1 rounded-full text-xs font-medium
                   ${status === "Dibuka"
-                    ? "bg-blue-100 text-blue-700"
+                    ? "bg-blue-100 text-blue-700" : 
+                    status === 'Ditutup' 
+                    ? "bg-red-100 text-red-700"
                     : "bg-green-100 text-green-700"
                   }`}>
                   {status}
@@ -305,9 +309,11 @@ const AllJadwal = () => {
                 </Popover>
               </td>
               <td className="px-4 py-3">
-                <button className="bg-blue-700 text-white px-4 py-1 rounded-md text-xs">
+                <Link to="https://jaklat.jakarta.go.id/" target="_blank" rel="noopener noreferrer">
+                <button disabled={status === "Ditutup" || status === "Dilaksanakan"} className={`${status === "Ditutup" || status === "Dilaksanakan" ? "disabled:bg-blue-300 disabled:cursor-not-allowed disabled:opacity-70" : ""} bg-blue-700 text-white px-4 py-1 rounded-md text-xs`}>
                   Daftar
                 </button>
+                </Link>
               </td>
 
             </tr>
