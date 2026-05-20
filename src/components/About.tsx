@@ -157,7 +157,7 @@ const About = () => {
               </td>
               <td className="px-4 py-3">
                 <Link to="https://jaklat.jakarta.go.id/" target="_blank" rel="noopener noreferrer">
-                <button className="bg-blue-700 text-white px-4 py-1 rounded-md text-xs">
+                <button disabled={status === "Dilaksanakan"} className={`${status === "Dilaksanakan" ? "disabled:bg-blue-300 disabled:cursor-not-allowed disabled:opacity-70" : ""} bg-blue-700 text-white px-4 py-1 rounded-md text-xs`}>
                   Daftar
                 </button>
                 </Link>
