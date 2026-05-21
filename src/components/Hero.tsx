@@ -40,64 +40,179 @@ const Hero = () => {
   console.log('tanggal:', tanggal);
 
   return (
-    <section className="relative bg-[#f5f7ff] overflow-hidden pt-24 pb-16">
-      <div className="absolute top-0 right-0 w-40 h-40 bg-blue-100 rounded-full translate-x-16 -translate-y-8 opacity-70" />
+    <section
+      className="
+        relative
+        min-h-[650px]
+        flex
+        items-center
+        overflow-hidden
+      "
+    >
 
-      <div className="container mx-auto px-6 lg:px-12 ">
-  {/* DATE */}
-        <div className="flex justify-end text-sm text-gray-500 mb-4">
-          <div className="flex items-center gap-2">
-            <span>📅 {tanggal}</span>
-            <span>|</span>
-            <span>{jam} WIB</span>
+      {/* BACKGROUND IMAGE */}
+      <img
+        src={HeroBG}
+        alt="Hero"
+        className="
+          absolute
+          inset-0
+          w-full
+          h-full
+          object-cover
+        "
+      />
+
+      {/* DARK OVERLAY */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-black/80
+          via-black/50
+          to-black/10
+        "
+      />
+
+      {/* CONTENT */}
+      <div
+        className="
+          relative
+          z-10
+          container
+          mx-auto
+          px-6
+        "
+      >
+
+        <div className="max-w-2xl">
+
+          {/* TITLE */}
+          <h1
+            className="
+              text-5xl
+              lg:text-7xl
+              font-bold
+              text-white
+              leading-tight
+              mb-6
+            "
+          >
+            Informasi Pelatihan
+            <br />
+
+            <span className="text-[#d8b36a]">
+              P4 Jakarta Barat
+            </span>
+          </h1>
+
+          {/* DESCRIPTION */}
+          <p
+            className="
+              text-white/90
+              text-lg
+              leading-relaxed
+              mb-8
+              max-w-xl
+            "
+          >
+            Mendukung peningkatan kapasitas tenaga pendidik melalui program pelatihan yang relevan, terstruktur, dan berkelanjutan.
+          </p>
+
+          {/* BUTTONS */}
+          <div className="flex flex-wrap gap-4 mb-10">
+            <Link to="https://jaklat.jakarta.go.id/" target="_blank" rel="noopener noreferrer">
+            <button
+              className="
+                bg-[#0a3abb]
+                hover:bg-blue-800
+                text-white
+                px-8
+                py-4
+                rounded-xl
+                font-medium
+                transition
+              "
+            >
+              Daftar Sekarang
+            </button>
+            </Link>
+
+            <Link to="/jadwal">
+
+              <button
+                className="
+                  border
+                  border-white
+                  text-white
+                  hover:bg-white
+                  hover:text-black
+                  px-8
+                  py-4
+                  rounded-xl
+                  font-medium
+                  transition
+                "
+              >
+                Lihat Jadwal Lengkap
+              </button>
+
+            </Link>
+
           </div>
-        </div>
 
-    {/* CONTENT */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-          {/* LEFT CONTENT */}
-          <div className="max-w-xl">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Informasi Pelatihan <br /> P4 Jakarta Barat
-            </h1>
+          {/* STATS */}
+          <div className="flex gap-5 flex-wrap">
 
-            <p className="text-gray-600 mb-6">
-              Tingkatkan kompetensi dan profesionalitas melalui berbagai pelatihan berkualitas
-              yang diselenggarakan Pusat Pelatihan dan Pengembangan Pendidikan Kota Administrasi Jakarta Barat.
-            </p>
+            <div
+              className="
+                bg-white/10
+                backdrop-blur-md
+                border
+                border-white/20
+                rounded-2xl
+                px-8
+                py-5
+                text-white
+              "
+            >
+              <h3 className="text-4xl font-bold">
+                30+
+              </h3>
 
-            <div className="flex gap-4">
-              <Link to="https://jaklat.jakarta.go.id/" target="_blank" rel="noopener noreferrer">
-                <button className="bg-[#0a3abb] text-white px-6 py-3 rounded-lg font-medium">
-                  Daftar Sekarang
-                </button>
-              </Link>
-              <Link to="/jadwal">
-                <button className="border border-[#0a3abb] text-[#0a3abb] px-6 py-3 rounded-lg font-medium">
-                  Lihat Jadwal Lengkap
-                </button>
-              </Link>
+              <p className="text-white/80">
+                Pelatihan
+              </p>
             </div>
 
-            {/* STATS */}
-            <div className="flex gap-8 mt-8 text-sm text-gray-600">
-              <div>
-                <p className="text-xl font-bold text-[#0a3abb]">30+</p>
-                <p>Pelatihan Berkualitas</p>
-              </div>
-              <div>
-                <p className="text-xl font-bold text-[#0a3abb]">1000+</p>
-                <p>Kuota Tersedia</p>
-              </div>
+            <div
+              className="
+                bg-white/10
+                backdrop-blur-md
+                border
+                border-white/20
+                rounded-2xl
+                px-8
+                py-5
+                text-white
+              "
+            >
+              <h3 className="text-4xl font-bold">
+                1000+
+              </h3>
+
+              <p className="text-white/80">
+                Kuota
+              </p>
             </div>
+
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="w-full max-w-md">
-            <img src={HeroBG} alt="Hero" className="w-full" />
-          </div>
         </div>
+
       </div>
+
     </section>
   );
 };

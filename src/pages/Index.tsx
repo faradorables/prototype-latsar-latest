@@ -14,8 +14,9 @@ import TnC from "@/components/TnC";
 const SECTIONS = [
   { id: "hero", Component: Hero },
   { id: "about", Component: About },
-  { id: "chefs", Component: Chefs },
-  { id: "tnc", Component: TnC },
+  { id: "jadwal-bulanan", Component: Chefs },
+  { id: "pendaftaran", Component: TnC },
+  { id: "hubungi-kami", Component: Footer },
 ];
 
 const HomePage = () => {
@@ -32,7 +33,7 @@ const HomePage = () => {
       ))}
 
       {/* Page footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

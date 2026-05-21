@@ -97,8 +97,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'playfair': ['Playfair Display', 'serif'],
-				'inter': ['Inter', 'sans-serif'],
+				'sans': ["Plus Jakarta Sans", "sans-serif"],
 			},
 			keyframes: {
 				'accordion-down': {
