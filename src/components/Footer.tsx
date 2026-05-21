@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
 
         <h2 className="text-2xl font-bold text-center mb-6">
-          Kontak Kami
+          Hubungi Kami
         </h2>
 
         <div className="bg-gray-100 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -19,7 +19,7 @@ const Footer = () => {
             <div>
               <p className="font-semibold">Telepon</p>
               <p className="text-sm text-gray-600">
-                +62 8123456789
+                +62 822-9724-7834
               </p>
             </div>
           </div>

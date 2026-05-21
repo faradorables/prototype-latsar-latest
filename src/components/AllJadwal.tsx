@@ -13,11 +13,13 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const AllJadwal = () => {
+    const [searchParams] = useSearchParams();
+    const initialMonth = searchParams.get("bulan") || "Semua Bulan";
     const [search, setSearch] = useState("");
-    const [bulan, setBulan] = useState("Semua Bulan");
+    const [bulan, setBulan] = useState(initialMonth);
     const [jenjang, setJenjang] = useState("Semua Jenjang");
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -238,7 +240,7 @@ const AllJadwal = () => {
                 <th className="px-4 py-3 text-left">Jenjang</th>
                 <th className="px-4 py-3 text-left">Kuota</th>
                 <th className="px-4 py-3 text-left">Status</th>
-                <th className="px-4 py-3 text-left">Info</th>
+                <th className="px-4 py-3 text-left">Detail</th>
                 <th className="px-4 py-3 text-left">Aksi</th>
               </tr>
             </thead>
@@ -248,7 +250,7 @@ const AllJadwal = () => {
           {paginatedData.map((item, index) => {
             const status = getStatus(item.tanggalMulai, item.tanggalSelesai);
             return (
-            <tr key={item.id} className="border-t hover:bg-gray-50">
+            <tr key={item.id} className="border-t hover:bg-blue-50 transition-colors">
               <td className="px-4 py-3">{index + 1}</td>
               <td className="px-4 py-3">{item.judul}</td>
               <td className="px-4 py-3">{formatRangeDate(item.tanggalMulai, item.tanggalSelesai)}</td>
