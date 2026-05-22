@@ -113,17 +113,63 @@ const Header = () => {
           </div>
 
           {/* MOBILE BUTTON */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700"
+          <button
+            className="md:hidden p-2 text-gray-600 hover:text-black"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              {isMenuOpen
-                ? <X className="w-6 h-6" />
-                : <Menu className="w-6 h-6" />
-              }
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
+            </svg>
+          </button>
+
+          {/* MOBILE MENU */}
+          {isMenuOpen && (
+            <div
+              className="
+                md:hidden
+                absolute
+                top-full
+                left-0
+                w-full
+                bg-white
+                shadow-lg
+                border-t
+                z-50
+              "
+            >
+              <div className="flex flex-col p-6 space-y-4">
+
+                {NAV_ITEMS.map(({ name, href }) => (
+                  <Link
+                    key={name}
+                    to={href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="
+                      text-gray-700
+                      hover:text-blue-700
+                      text-lg
+                      font-medium
+                      transition
+                    "
+                  >
+                    {name}
+                  </Link>
+                ))}
+
+              </div>
+            </div>
+          )}
 
         </div>
       </nav>
