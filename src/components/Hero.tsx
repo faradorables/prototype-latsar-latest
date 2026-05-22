@@ -47,6 +47,8 @@ const Hero = () => {
         flex
         items-center
         overflow-hidden
+        pt-24
+    md:pt-0
       "
     >
 
