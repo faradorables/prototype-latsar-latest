@@ -157,7 +157,7 @@ const Header = () => {
                   <Link
                     key={name}
                     to={href}
-                    target={target || (href.startsWith("#") ? "_self" : "_blank")}
+                    target={target || "_self"}
                     rel={href.startsWith("#") ? undefined : "noopener noreferrer"}
                     onClick={() => handleNavigation(href)}
                     className="
