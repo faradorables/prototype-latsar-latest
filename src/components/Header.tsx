@@ -6,10 +6,11 @@ import { HashLink } from "react-router-hash-link";
 
 // Navigation link configuration for easier future updates
 const NAV_ITEMS = [
-  { name: "Beranda", href: "/#hero" },
-  { name: "Jadwal", href: "/jadwal" },
-  { name: "Pendaftaran", href: "/#pendaftaran" },
-  { name: "Hubungi Kami", href: "/#hubungi-kami" },
+  { name: "Beranda", href: "/#hero", target: "" },
+  { name: "Jadwal", href: "/jadwal", target: "" },
+  { name: "Pendaftaran", href: "/#pendaftaran", target: "" },
+  { name: "Hubungi Kami", href: "/#hubungi-kami", target: "" },
+  { name: "SI-PEKA", href: "https://laporan-lab-p4jb.vercel.app/", target: "_blank" },
 ];
 
 const Header = () => {
@@ -75,7 +76,7 @@ const Header = () => {
           {/* DESKTOP NAV */}
           <div className="hidden md:flex items-center gap-2">
 
-            {NAV_ITEMS.map(({ name, href }) => {
+            {NAV_ITEMS.map(({ name, href, target }) => {
 
               const isActive =
                 window.location.pathname === href;
@@ -84,6 +85,8 @@ const Header = () => {
                 <HashLink 
                   smooth to={href}
                   key={name}
+                  target={target || "_self"}
+                  rel={href.startsWith("#") ? undefined : "noopener noreferrer"}
                 >
 
                   <button
@@ -150,11 +153,13 @@ const Header = () => {
             >
               <div className="flex flex-col p-6 space-y-4">
 
-                {NAV_ITEMS.map(({ name, href }) => (
+                {NAV_ITEMS.map(({ name, href, target }) => (
                   <Link
                     key={name}
                     to={href}
-                    onClick={() => setIsMenuOpen(false)}
+                    target={target || (href.startsWith("#") ? "_self" : "_blank")}
+                    rel={href.startsWith("#") ? undefined : "noopener noreferrer"}
+                    onClick={() => handleNavigation(href)}
                     className="
                       text-gray-700
                       hover:text-blue-700
